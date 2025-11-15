@@ -19,6 +19,7 @@
         --main-font: Verdana, Geneva, Tahoma, sans-serif;
         --hover-background: #f2735b;
         --main-bg-color: #f5f5f5;
+        --accent-color: #326949;
       }
       * {
         margin: 0;
@@ -41,12 +42,11 @@
       .card-img-overlay {
         background: rgba(0, 0, 0, 0.8);
       }
-      footer .card-body a {
-        text-decoration: none;
-        color: #000;
-        font-size: 1.5rem;
-        font-weight: 400;
+      img.card-img {
+        height: 50vh;
+        object-fit: cover;
       }
+
       main {
         display: flex;
         flex-direction: column;
@@ -59,30 +59,32 @@
         font-weight: 400;
         line-height: 1.1;
         margin-bottom: 1rem;
-        color: #56b77e;
       }
       main h2 {
         font-size: 2rem;
         font-weight: 300;
         margin-bottom: 0.5rem;
-        color: #326949;
-      }
-      main h3 {
-        font-size: 1.5rem;
-        font-weight: 100;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        color: gray;
+        color: var(--accent-color);
       }
       main a {
         text-decoration: none;
-        color: #000;
+        color: #dd1212;
         font-size: 1.8rem;
         font-weight: 400;
         border: 2px solid #cacaca;
         padding: 1rem 2rem;
         border-radius: 5px;
         transition: all 0.3s ease;
+      }
+      footer .card {
+        background-color: transparent;
+        border: none;
+      }
+      footer .card-body a {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        font-weight: 400;
       }
       main a:hover {
         background: var(--hover-background);
