@@ -47,11 +47,19 @@
       img.card-img {
         height: 50vh;
         width: 100vw;
+        object-fit: cover;
+      }
+      .card-title {
+        color: #676767;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
       }
       .card-text {
         list-style: none; /* removes bullets */
         padding-left: 0; /* removes indentation */
         margin: 0; /* optional: tighten spacing */
+        color: #676767;
       }
       .card-text li {
         margin-bottom: 0.5rem; /* optional: spacing between items */
@@ -64,7 +72,7 @@
         text-align: center;
         min-height: 60vh;
       }
-      main h1 {
+      h1 {
         font-size: 5rem;
         font-weight: 400;
         line-height: 1.1;
@@ -101,9 +109,7 @@
         <img class="card-img" src="img/small-business.png" alt="Card image" />
         <div
           class="card-img-overlay d-flex justify-content-center align-items-center">
-          <h1 class="card-title align-middle">
-            Cybersecurity for Small Business
-          </h1>
+          <h1 class="align-middle">Cybersecurity for Small Business</h1>
         </div>
       </div>
       <div>
@@ -153,7 +159,7 @@
           <div class="card-body">
             <h5 class="card-title">Compliance</h5>
             <ul class="card-text">
-              <li>Meeting regulatory requirements (GDPR, HIPAA, PCI DSS)</li>
+              <li>Meet regulatory requirements (GDPR, HIPAA, PCI DSS)</li>
               <li>Audits and monitoring</li>
               <li>Documentation and reporting</li>
               <li>Employee training specific to compliance</li>
