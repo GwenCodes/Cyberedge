@@ -34,9 +34,11 @@
       body {
         font-family: var(--main-font);
         background: var(--main-bg-color);
-        padding: 2rem;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
       }
-      body .card-body {
+      .card-body {
         max-height: 50vh;
       }
       .card-img-overlay {
@@ -44,7 +46,15 @@
       }
       img.card-img {
         height: 50vh;
-        object-fit: cover;
+        width: 100vw;
+      }
+      .card-text {
+        list-style: none; /* removes bullets */
+        padding-left: 0; /* removes indentation */
+        margin: 0; /* optional: tighten spacing */
+      }
+      .card-text li {
+        margin-bottom: 0.5rem; /* optional: spacing between items */
       }
 
       main {
@@ -102,7 +112,7 @@
         </h2>
       </div>
       <br />
-      <div class="card-deck mt-5">
+      <div class="card-deck m-5">
         <div class="card">
           <img
             class="card-img-top"
@@ -110,11 +120,12 @@
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Governance</h5>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
+            <ul class="card-text">
+              <li>Data governance frameworks</li>
+              <li>Policy creation aligned with business goals</li>
+              <li>Accountability and roles/responsibilities</li>
+              <li>Strategic oversight</li>
+            </ul>
           </div>
         </div>
         <div class="card">
@@ -124,10 +135,14 @@
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Risk Management</h5>
-            <p class="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </p>
+            <ul class="card-text">
+              <li>Vulnerability assessments</li>
+              <li>Threat identification and prioritization</li>
+              <li>Technical safeguards (firewalls, MFA, encryption, VPNs)</li>
+              <li>Incident response planning</li>
+              <li>Proactive threat hunting</li>
+              <li>Attack vector identification</li>
+            </ul>
           </div>
         </div>
         <div class="card">
@@ -137,11 +152,13 @@
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Compliance</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
+            <ul class="card-text">
+              <li>Meeting regulatory requirements (GDPR, HIPAA, PCI DSS)</li>
+              <li>Audits and monitoring</li>
+              <li>Documentation and reporting</li>
+              <li>Employee training specific to compliance</li>
+              <li>Keeping up with changing regulations</li>
+            </ul>
           </div>
         </div>
       </div>
