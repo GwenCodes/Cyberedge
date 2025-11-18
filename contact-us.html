@@ -19,10 +19,6 @@
         /* rem base font size 10px */
         font-size: 62.5%;
         --main-font: Verdana, Geneva, Tahoma, sans-serif;
-        --hover-background: #f2735b;
-        --main-bg-color: #f5f5f5;
-        --main-dark-bg-color: #212529;
-        --accent-color: #326949;
       }
       * {
         margin: 0;
@@ -35,9 +31,13 @@
         text-align: center;
         min-height: 60vh;
       }
+      .logo {
+        height: 100px;
+        margin: 10px;
+      }
+
       body {
         font-family: var(--main-font);
-        background: var(--main-dark-bg-color);
         margin: 0;
         padding: 20px;
       }
@@ -46,10 +46,27 @@
         border-radius: 8px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
       }
+      footer a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      footer a:hover,
+      footer .nav .nav-link:hover {
+        color: #ffa552 !important;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-    <div class="logo">Cyber Edge</div>
+    <div>
+      <a href="/index.html">
+        <img
+          class="logo img-fluid"
+          src="img/CyberEdge-logo.png"
+          alt="cyberedge logo" />
+      </a>
+    </div>
     <main>
       <form>
         <div class="contact-card mx-auto p-4 bg-white">
@@ -111,32 +128,27 @@
         </div>
       </form>
     </main>
-    <footer>
+    <footer class="py-3 my-4">
       <div class="container">
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">Services</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="./contact-us.html"
-                class="nav-link px-2 text-body-secondary"
-                >Contact Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-            </li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2025 Cyberedge LLC</p>
-        </footer>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item mx-3">
+            <a href="/index.html" class="nav-link px-2 text-body-secondary"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/contact-us.html" class="nav-link px-2 text-body-secondary"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav-item mx-3">
+            <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+          </li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2025 Cyber Edge LLC</p>
       </div>
     </footer>
   </body>
