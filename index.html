@@ -26,9 +26,7 @@
         padding: 0;
       }
       .logo {
-        font-size: 2rem;
-        font-weight: 400;
-        text-decoration: none;
+        height: 100px;
         margin: 10px;
       }
       body {
@@ -52,7 +50,7 @@
         background: rgba(0, 0, 0, 0.8);
       }
       img.card-img {
-        height: 50vh;
+        height: 60vh;
         width: 100vw;
         object-fit: cover;
       }
@@ -113,10 +111,13 @@
     </style>
   </head>
   <body>
-    <div class="logo">Cyber Edge</div>
+    <img
+      class="logo img-fluid"
+      src="img/CyberEdge-logo.png"
+      alt="cyberedge logo" />
     <main>
       <div class="card text-white">
-        <img class="card-img" src="img/small-business.png" alt="Card image" />
+        <img class="card-img" src="img/home-image.png" alt="Card image" />
         <div
           class="card-img-overlay d-flex justify-content-center align-items-center">
           <h1 class="align-middle">Cybersecurity for Small Business</h1>
@@ -126,6 +127,9 @@
         <h2 class="mt-5">
           Protect your business, your data, and your reputation
         </h2>
+        <div class="d-grid col-4 mx-auto">
+          <button class="btn btn-primary" type="button">Learn More</button>
+        </div>
       </div>
       <br />
       <div class="card-deck m-5">
