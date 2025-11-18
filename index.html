@@ -17,7 +17,7 @@
         /* rem base font size 10px */
         font-size: 62.5%;
         --main-font: Verdana, Geneva, Tahoma, sans-serif;
-        --hover-background: #f2735b;
+        --hover-background: #ffa552;
         --main-bg-color: #f5f5f5;
         --accent-color: #326949;
       }
@@ -36,6 +36,23 @@
         padding: 0;
         overflow-x: hidden;
       }
+      .btn.btn-primary {
+        background-color: var(--accent-color);
+        color: white;
+        width: 15rem;
+        height: 5rem;
+        font-size: 1.75rem;
+        border: none;
+        margin: 3rem 0 auto;
+        align-items: center;
+      }
+      .btn.btn-primary:hover {
+        background-color: var(--hover-background);
+        color: white;
+      }
+      .d-grid {
+        justify-items: center;
+      }
 
       .card-body {
         max-height: 50vh;
@@ -50,7 +67,7 @@
         background: rgba(0, 0, 0, 0.8);
       }
       img.card-img {
-        height: 60vh;
+        height: 65vh;
         width: 100vw;
         object-fit: cover;
       }
@@ -102,7 +119,7 @@
         border-radius: 5px;
         transition: all 0.3s ease;
       }
-      main a:hover {
+      a:hover {
         background: var(--hover-background);
         color: #fff;
         border-color: #f2735b;
@@ -127,7 +144,7 @@
         <h2 class="mt-5">
           Protect your business, your data, and your reputation
         </h2>
-        <div class="d-grid col-4 mx-auto">
+        <div class="d-grid">
           <button class="btn btn-primary" type="button">Learn More</button>
         </div>
       </div>
@@ -135,8 +152,8 @@
       <div class="card-deck m-5">
         <div class="card">
           <img
-            class="card-img-top"
-            src="img/small-business.png"
+            class="card-img-top mt-4"
+            src="img/cyber-governance.PNG"
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Governance</h5>
@@ -150,8 +167,8 @@
         </div>
         <div class="card">
           <img
-            class="card-img-top"
-            src="img/small-business.png"
+            class="card-img-top mt-4"
+            src="img/cyber-risk-management.PNG"
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Risk Management</h5>
@@ -167,8 +184,8 @@
         </div>
         <div class="card">
           <img
-            class="card-img-top"
-            src="img/small-business.png"
+            class="card-img-top mt-4"
+            src="img/cyber-compliance.PNG"
             alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">Compliance</h5>
