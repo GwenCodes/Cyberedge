@@ -21,8 +21,8 @@
     <title>Cyber Edge LLC</title>
     <style>
       /* ========================================
-   ROOT & GLOBAL STYLES
-   ======================================== */
+              ROOT & GLOBAL STYLES
+              ======================================== */
       :root {
         /* rem base font size 10px */
         font-size: 62.5%;
@@ -51,16 +51,16 @@
       }
 
       /* ========================================
-   HEADER - LOGO
-   ======================================== */
+              HEADER - LOGO
+              ======================================== */
       .logo {
         height: 100px;
         margin: 10px;
       }
 
       /* ========================================
-   MAIN SECTION
-   ======================================== */
+              MAIN SECTION
+              ======================================== */
       main {
         display: flex;
         flex-direction: column;
@@ -95,7 +95,7 @@
       @media (max-width: 576px) {
         h1 {
           font-size: 4.5rem;
-          line-height: 1.5;
+          line-height: 1.4;
           margin-left: 2rem;
           margin-left: 2rem;
         }
@@ -119,7 +119,7 @@
       }
 
       .card-body {
-        max-height: 50vh;
+        max-height: none; /* ensure body can grow */
       }
 
       .card-title {
@@ -142,10 +142,29 @@
       .card-text li {
         margin-bottom: 0.5rem;
       }
-
+      @media (max-width: 768px) and (orientation: landscape) {
+        .card-text {
+          font-size: 1rem;
+        }
+        /* Taller card when rotated (landscape view) */
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        .row.row-cols-1.row-cols-md-3 > * {
+          flex: 0 0 100%; /* each card takes full width */
+          max-width: 100%; /* prevent shrinking */
+        }
+      }
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        .card.h-100 {
+          height: clamp(65vh, 80vw, 90vh);
+        }
+        .card-body {
+          max-height: none; /* remove restrictive max-height */
+        }
+      }
       /* ========================================
-   ABOUT SECTION
-   ======================================== */
+              ABOUT SECTION
+              ======================================== */
       .about-section {
         font-family: var(--main-font);
         color: rgb(245, 245, 245);
@@ -219,8 +238,8 @@
       }
 
       /* ========================================
-   FOOTER
-   ======================================== */
+              FOOTER
+              ======================================== */
       footer a {
         color: inherit;
         text-decoration: none;
@@ -236,8 +255,8 @@
       }
 
       /* ========================================
-   UTILITY CLASSES (Bootstrap overrides)
-   ======================================== */
+              UTILITY CLASSES (Bootstrap overrides)
+              ======================================== */
       .container,
       .container-fluid,
       .container-lg,
@@ -342,12 +361,28 @@
             <div class="col-lg-7 text-left text-lg-start">
               <h2 class="display-4 fw-bold lh-1 mb-5">About Cyber Edge</h2>
               <p class="col-lg-10 fs-3">
-                We specialize in cybersecurity solutions for small to mid-sized
-                businesses, healthcare organizations, financial services firms
-                and e-commerce companies who want better protection from cyber
-                threats. Whether you've been in business for 10 minutes or 20
-                years, your organization needs to be protected from breaches. Do
-                what has proven to work (hint: not just firewalls).
+                After decades in technology and information security, I founded
+                Cyber Edge to bring enterprise-grade cybersecurity expertise to
+                the organizations that need it most.
+              </p>
+              <p>
+                With over 15 years leading information security initiatives
+                across financial services, insurance, healthcare, and critical
+                infrastructure, I've helped organizations navigate complex
+                regulatory frameworks.
+              </p>
+              <p>
+                Now, I'm focused on bringing that same level of strategic
+                protection to small and mid-sized businesses, healthcare
+                organizations, financial services firms, and e-commerce
+                companies—organizations that face the same sophisticated cyber
+                threats as large enterprises but often lack dedicated security
+                leadership.
+              </p>
+              <p>
+                Whether your business is just starting out or has been operating
+                for decades, you deserve protection that goes beyond basic
+                firewalls.
               </p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
