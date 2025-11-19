@@ -8,11 +8,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous" />
+
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -80,7 +80,12 @@
         border-radius: 4px;
       }
       .contact-card-title {
-        font-size: large;
+        font-size: 1.25rem; /* consistent with h5 */
+        margin-bottom: 1rem; /* balanced spacing */
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--bs-heading-color, #212529);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
       .card-title {
         color: #676767;
@@ -117,6 +122,10 @@
         margin-bottom: 0.5rem;
         color: var(--accent-color);
       }
+      h5.contact-card-title.mb-5 {
+        font-family: "Russo One", sans-serif;
+        font-size: 3rem;
+      }
       form {
         padding-left: 40rem;
         padding-right: 40rem;
@@ -126,6 +135,22 @@
         padding: 5rem;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
         border-radius: 4px;
+      }
+      @media (max-width: 768px) {
+        /* Adjust breakpoint as needed */
+        form {
+          width: 100%;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          margin: 2rem auto;
+          box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+      }
+      .custom-textarea {
+        /*width: 100%; /* Makes it as wide as its parent */
+        /* Or use a fixed width, e.g.: */
+        width: 600px;
+        height: 100px;
       }
 
       /* Footer-specific link styles to override Bootstrap */
@@ -309,14 +334,14 @@
                       placeholder="Website Address"
                       required />
                   </div>
-
-                  <div class="form-floating">
-                    <textarea
-                      class="form-control col-md-12 mb-3 custom-textarea"
-                      placeholder="Leave a comment here"
-                      id="floatingTextarea2"
-                      style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
+                  <div class="col-md-12 mb-3">
+                    <label for="validationDefault05">Leave a comment</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="validationDefault05"
+                      placeholder="Comment here"
+                      required />
                   </div>
                 </div>
                 <button class="btn btn-primary" type="submit">
