@@ -167,24 +167,23 @@
               ======================================== */
       .about-section {
         font-family: var(--main-font);
-        color: rgb(245, 245, 245);
+        font-weight: 100;
+        color: #e8e8e8;
         font-size: 4rem;
-        background: linear-gradient(
-          to top,
-          #1e3c72 0%,
-          #1e3c72 1%,
-          #2a5298 100%
-        );
+        background-color: #1d2d43;
       }
-
       .about-section h2.display-4 {
         color: #f5f5f5;
       }
 
       .about-section p {
-        font-size: 1.25rem;
-        line-height: 1.6;
+        font-size: 1.5rem;
+        line-height: 1.75;
         color: rgb(245, 245, 245);
+      }
+      .signature p {
+        font-size: 2rem;
+        font-style: italic;
       }
       @media (max-width: 576px) {
         .about-section {
@@ -206,6 +205,10 @@
         max-width: 15rem;
         display: block;
         margin: 0 auto;
+      }
+      .about-section img {
+        max-width: 30rem;
+        margin-bottom: 8rem;
       }
 
       form h3 {
@@ -359,31 +362,39 @@
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
           <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-left text-lg-start">
+              <img
+                src="img/cyberedge-llc-profile.png"
+                alt="cyberedge-profile" />
               <h2 class="display-4 fw-bold lh-1 mb-5">About Cyber Edge</h2>
-              <p class="col-lg-10 fs-3">
-                After decades in technology and information security, I founded
-                Cyber Edge to bring enterprise-grade cybersecurity expertise to
-                the organizations that need it most.
-              </p>
-              <p>
-                With over 15 years leading information security initiatives
-                across financial services, insurance, healthcare, and critical
-                infrastructure, I've helped organizations navigate complex
-                regulatory frameworks.
-              </p>
-              <p>
-                Now, I'm focused on bringing that same level of strategic
-                protection to small and mid-sized businesses, healthcare
-                organizations, financial services firms, and e-commerce
-                companies—organizations that face the same sophisticated cyber
-                threats as large enterprises but often lack dedicated security
-                leadership.
-              </p>
-              <p>
-                Whether your business is just starting out or has been operating
-                for decades, you deserve protection that goes beyond basic
-                firewalls.
-              </p>
+              <div class="col-lg-10">
+                <p>
+                  After decades in technology and information security, I
+                  founded Cyber Edge to bring enterprise-grade cybersecurity
+                  expertise to the organizations that need it most.
+                </p>
+                <p>
+                  With over 15 years leading information security initiatives
+                  across financial services, insurance, healthcare, and critical
+                  infrastructure, I've helped organizations navigate complex
+                  regulatory frameworks.
+                </p>
+                <p>
+                  Now, I'm focused on bringing that same level of strategic
+                  protection to small and mid-sized businesses, healthcare
+                  organizations, financial services firms, and e-commerce
+                  companies—organizations that face the same sophisticated cyber
+                  threats as large enterprises but often lack dedicated security
+                  leadership.
+                </p>
+                <p>
+                  Whether your business is just starting out or has been
+                  operating for decades, you deserve protection that goes beyond
+                  basic firewalls.
+                </p>
+                <div class="signature">
+                  <p>-Van</p>
+                </div>
+              </div>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
               <form
