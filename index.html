@@ -202,10 +202,13 @@
       }
 
       .about-section-logo {
-        max-width: 15rem;
+        width: clamp(10rem, 25vw, 12rem); /* min 3rem, max 8rem */
+        height: auto;
         display: block;
-        margin: 0 auto;
+        margin: auto;
+        margin-bottom: 1rem;
       }
+
       .about-section img {
         max-width: 30rem;
         margin-bottom: 8rem;
@@ -219,9 +222,10 @@
       }
 
       .form-label {
-        font-size: 1.25rem;
-        font-weight: 400;
+        font-size: clamp(1.5rem, 15vw, 1.5rem); /* scales with viewport */
+        font-weight: 500;
         color: #333;
+        margin-bottom: 0.5rem;
       }
 
       .btn.btn-primary {
