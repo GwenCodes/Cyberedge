@@ -194,12 +194,12 @@
 
       /* About Section - Contact Form */
       .contact-card {
-        padding: 4rem;
-        margin: 3rem auto;
+        padding: 5rem;
+        margin: 5rem auto;
         max-width: 500px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
-        background-color: #f3f3f3;
+        background-color: #e3e3e3;
       }
       .contact-card input::placeholder,
       .contact-card textarea::placeholder {
@@ -232,12 +232,16 @@
         color: var(--accent-color);
         text-align: center;
       }
+      input.form-control {
+        height: 4rem; /* adjust as needed */
+      }
 
       .form-label {
-        font-size: clamp(1.5rem, 15vw, 1.5rem); /* scales with viewport */
+        font-size: clamp(1rem, 15vw, 1.2rem); /* scales with viewport */
         font-weight: 500;
         color: #333;
         margin-bottom: 0.5rem;
+        margin-left: 1rem;
       }
 
       .btn.btn-primary {
@@ -416,7 +420,7 @@
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
               <form
-                class="contact-card mx-auto bg-white shadow rounded text-start"
+                class="contact-card mx-auto shadow rounded text-start"
                 name="contact"
                 method="POST"
                 data-netlify="true"
