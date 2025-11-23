@@ -200,6 +200,11 @@
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
       }
+      .contact-card input::placeholder,
+      .contact-card textarea::placeholder {
+        color: #8b8b8b; /* darker gray for better contrast */
+        opacity: 1;
+      }
 
       .about-section-logo {
         width: clamp(10rem, 25vw, 12rem); /* min 3rem, max 8rem */
@@ -207,6 +212,11 @@
         display: block;
         margin: auto;
         margin-bottom: 1rem;
+      }
+      @media (max-width: 600px) {
+        .logo {
+          margin-bottom: 1rem; /* reduce spacing below logo */
+        }
       }
 
       .about-section img {
@@ -286,6 +296,7 @@
       <a href="/index.html">
         <img
           class="logo img-fluid"
+          id="homepage"
           src="img/CyberEdge-logo.png"
           alt="cyberedge logo" />
       </a>
@@ -368,7 +379,8 @@
             <div class="col-lg-7 text-left text-lg-start">
               <img
                 src="img/cyberedge-llc-profile.png"
-                alt="cyberedge-profile" />
+                alt="cyberedge-profile"
+                id="about" />
               <h2 class="display-4 fw-bold lh-1 mb-5">About Cyber Edge</h2>
               <div class="col-lg-10">
                 <p>
@@ -402,12 +414,17 @@
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
               <form
-                class="contact-card mx-auto bg-white shadow rounded text-start">
+                class="contact-card mx-auto bg-white shadow rounded text-start"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                class="contact-card p-4 border rounded">
+                <input type="hidden" name="form-name" value="contact" />
                 <img
                   src="img/CyberEdge-logo.png"
-                  class="about-section-logo"
+                  class="about-section-logo mb-3 mb-md-4"
                   alt="cyber-edge-logo" />
-                <h3>Get Support</h3>
+                <h3 id="get-support">Get Support</h3>
                 <div class="row">
                   <div class="col-12">
                     <label for="name" class="form-label">Name</label>
@@ -469,15 +486,17 @@
       <div class="container">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item mx-3">
-            <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+            <a href="#homepage" class="nav-link px-2 text-body-secondary"
+              >Home</a
+            >
           </li>
           <li class="nav-item mx-3">
-            <a href="#" class="nav-link px-2 text-body-secondary"
+            <a href="#get-support" class="nav-link px-2 text-body-secondary"
               >Get Support</a
             >
           </li>
           <li class="nav-item mx-3">
-            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+            <a href="#about" class="nav-link px-2 text-body-secondary">About</a>
           </li>
         </ul>
         <p class="text-center text-body-secondary">© 2025 Cyber Edge LLC</p>
