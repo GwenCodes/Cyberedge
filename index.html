@@ -35,6 +35,7 @@
         --hover-background: #ffa552;
         --main-bg-color: #f5f5f5;
         --accent-color: #326949;
+        --gray-font: #676767;
       }
       body {
         font-family: var(--main-font);
@@ -108,12 +109,11 @@
       }
 
       .card-title {
-        color: #676767;
+        color: #630707;
         font-family: var(--russo-font);
-        font-size: var(--h3-fs);
         font-weight: 400;
         margin-top: 1rem;
-        font-size: var(--block-fs);
+        font-size: var(--h4-fs);
         margin-bottom: 1rem;
       }
       .card-text {
@@ -170,6 +170,10 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
+      .accordion-button {
+        font-family: var(--main-font);
+        color: var(--gray-font);
+      }
 
       .accordion-body {
         width: 80%; /* default for mobile */
@@ -186,11 +190,7 @@
         font-family: var(--main-font);
         font-weight: 100;
         color: #b3b1a2;
-        background-color: #03283f;
-      }
-      .about-section h3.display-4 {
-        font-family: var(--russo-font);
-        color: #f5f5f5;
+        background-color: #091124;
       }
 
       .signature p {
@@ -330,14 +330,14 @@
           class="card-img-overlay d-flex justify-content-center align-items-center">
           <div class="text-center">
             <h1 class="mb-3">Cybersecurity for Small Business</h1>
-            <h2 class="mb-4">
+            <h3 class="mb-4">
               Protect your business, your data, and your reputation
-            </h2>
+            </h3>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-5 m-5">
+        <div class="row row-cols-1 row-cols-md-3 py-lg-5 g-5 m-3">
           <div class="col">
             <div class="card h-100">
               <img
@@ -345,7 +345,7 @@
                 src="img/cyber-governance.PNG"
                 alt="Card image cap" />
               <div class="card-body">
-                <h5 class="card-title">Governance</h5>
+                <h3 class="card-title">Governance</h3>
                 <ul class="card-text">
                   <li>Data governance frameworks</li>
                   <li>Policy creation aligned with business goals</li>
@@ -363,7 +363,7 @@
                 src="img/cyber-risk-management.PNG"
                 alt="Card image cap" />
               <div class="card-body">
-                <h5 class="card-title">Risk Management</h5>
+                <h3 class="card-title">Risk Management</h3>
                 <ul class="card-text">
                   <li>Vulnerability assessments</li>
                   <li>Threat identification and prioritization</li>
@@ -384,7 +384,7 @@
                 src="img/cyber-compliance.PNG"
                 alt="Card image cap" />
               <div class="card-body">
-                <h5 class="card-title">Compliance</h5>
+                <h3 class="card-title">Compliance</h3>
                 <ul class="card-text">
                   <li>Meet regulatory requirements (GDPR, HIPAA, PCI DSS)</li>
                   <li>Audits and monitoring</li>
@@ -421,7 +421,7 @@
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse lh-base ms-3"
+                class="accordion-collapse collapse lh-base ms-5"
                 aria-labelledby="headingOne"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
@@ -462,7 +462,7 @@
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse lh-base ms-3"
+                class="accordion-collapse collapse lh-base ms-5"
                 aria-labelledby="headingTwo"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
@@ -503,7 +503,7 @@
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse lh-base ms-3"
+                class="accordion-collapse collapse lh-base ms-5"
                 aria-labelledby="headingTwo"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
@@ -538,7 +538,7 @@
               </h2>
               <div
                 id="collapseThree"
-                class="accordion-collapse collapse lh-base ms-3"
+                class="accordion-collapse collapse lh-base ms-5"
                 aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
@@ -552,13 +552,14 @@
       </section>
       <div class="about-section mt-5">
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-          <div class="row align-items-center g-lg-5 py-5">
+          <div class="row align-items-center g-lg-5">
             <div class="col-lg-7 text-left text-lg-start">
               <img
                 src="img/cyberedge-llc-profile.png"
                 alt="cyberedge-profile"
                 id="about" />
-              <h2 class="display-4 fw-bold mb-2">About Cyber Edge</h2>
+              <h3 class="mb-2">About Cyber Edge</h3>
+              <br />
               <div class="col-lg-10">
                 <p>
                   After decades in technology and information security, I
@@ -601,7 +602,7 @@
                   src="img/CyberEdge-logo.png"
                   class="about-section-logo mb-3 mb-md-4"
                   alt="cyber-edge-logo" />
-                <h3 id="get-support">Get Support</h3>
+                <h4 id="get-support">Get Support</h4>
                 <div class="row">
                   <div class="col-12">
                     <label for="name" class="form-label">Name</label>
@@ -655,7 +656,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary w-50">
+                  <button type="submit" class="btn btn-primary w-40">
                     Submit
                   </button>
                 </div>
