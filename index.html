@@ -19,13 +19,13 @@
               ROOT & GLOBAL STYLES
               ======================================== */
       :root {
-        --block-fs: clamp(0.56rem, 0.3981rem + 0.7194vw, 0.8442rem);
-        --p-fs: clamp(0.7rem, 0.4578rem + 1.0767vw, 1.1253rem);
-        --h4-fs: clamp(0.875rem, 0.519rem + 1.5823vw, 1.5rem);
-        --h3-fs: clamp(1.0938rem, 0.5778rem + 2.293vw, 1.9995rem);
-        --h2-fs: clamp(1.3672rem, 0.6277rem + 3.2864vw, 2.6653rem);
-        --h1-fs: clamp(1.709rem, 0.6587rem + 4.6681vw, 3.5529rem);
-        --xl-fs: clamp(2.1362rem, 0.6553rem + 6.5817vw, 4.736rem);
+        --block-fs: clamp(0.56rem, 0.4rem + 0.72vw, 0.84rem);
+        --p-fs: clamp(0.7rem, 0.44rem + 1.08vw, 1.13rem);
+        --h4-fs: clamp(0.88rem, 0.52rem + 1.58vw, 1.5rem);
+        --h3-fs: clamp(1.094rem, 0.58rem + 2.29vw, 2rem);
+        --h2-fs: clamp(1.37rem, 0.63rem + 3.29vw, 2.67rem);
+        --h1-fs: clamp(1.71rem, 0.66rem + 4.67vw, 3.55rem);
+        --xl-fs: clamp(2.14rem, 0.66rem + 6.58vw, 4.74rem);
 
         /* Font families */
         --main-font: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,6 +49,9 @@
         margin: 0;
         padding: 0;
       }*/
+      .container {
+        padding: 0 1em;
+      }
       h1 {
         font-size: var(--h1-fs);
         margin: 0 auto;
@@ -116,17 +119,31 @@
         font-size: var(--h4-fs);
         margin-bottom: 1rem;
       }
+      @media (max-width: 576px) {
+        .card-title {
+          font-size: 1rem; /* smaller than default */
+          line-height: 1.3; /* tighten spacing */
+        }
+      }
       .card-text {
         list-style: none;
         padding-left: 0;
         margin: 0;
         color: #676767;
-        font-size: var(--block-fs);
+        font-family: var(--p-fs);
       }
 
       .card-text li {
         margin-bottom: 0.5rem;
       }
+
+      @media (max-width: 576px) {
+        .card-text {
+          font-size: 0.9rem; /* smaller than default */
+          line-height: 1.3; /* tighten spacing */
+        }
+      }
+
       @media (max-width: 768px) and (orientation: landscape) {
         .card-text {
           font-size: 1rem;
@@ -147,18 +164,39 @@
           max-height: none; /* remove restrictive max-height */
         }
       }
+      /* Mobile-first: target small screens */
+      @media (max-width: 576px) {
+        /* Remove gutter padding from row children */
+        .row > * {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        /* Make columns take full width (already default with row-cols-1) */
+        .col {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+
       /* ========================================
               FAQ SECTION
         ======================================== */
       .faq {
-        width: 80%; /* default for mobile */
+        width: 80%;
         margin: 0 auto; /* center horizontally */
       }
 
       /* Large screens (≥992px in Bootstrap) */
-      @media (min-width: 992px) {
+      @media (min-width: 769px) {
         .faq {
           width: 60%;
+        }
+      }
+      @media (max-width: 576px) {
+        .faq {
+          width: 100%; /* full width on small screens */
+          padding: 0 0.5rem; /* keep a little breathing room at edges */
         }
       }
 
@@ -176,10 +214,20 @@
       }
 
       .accordion-body {
-        width: 80%; /* default for mobile */
+        width: 80%;
         font-family: var(--main-font);
         color: #676767;
         text-align: left;
+      }
+      @media (max-width: 576px) {
+        .accordion-body {
+          margin: 0 !important; /* ensure no margin */
+          width: 100% !important; /* span full width */
+        }
+
+        .accordion-collapse {
+          margin-left: 0 !important; /* remove parent indentation */
+        }
       }
 
       /* ========================================
@@ -234,46 +282,8 @@
 
       .about-section img {
         max-width: 20rem;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
         border-radius: 7px;
-      }
-
-      form h3 {
-        font-size: 2.4rem;
-        font-weight: 600;
-        color: var(--accent-color);
-        text-align: center;
-      }
-      form.contact-card .col-12 {
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
-      }
-      input.form-control {
-        height: 4rem; /* adjust as needed */
-      }
-
-      .form-label {
-        font-size: clamp(1rem, 15vw, 1.2rem); /* scales with viewport */
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 0.5rem;
-        margin-left: 1rem;
-      }
-
-      .btn.btn-primary {
-        background-color: var(--accent-color);
-        color: white;
-        width: 15rem;
-        height: 5rem;
-        font-size: 1.75rem;
-        border: none;
-        margin: 3rem 0 auto;
-        align-items: center;
-      }
-
-      .btn.btn-primary:hover {
-        background-color: var(--hover-background);
-        color: white;
       }
 
       /* ========================================
@@ -291,25 +301,6 @@
       footer .nav .nav-link:hover {
         color: #ffa552 !important;
         text-decoration: none;
-      }
-
-      /* ========================================
-              UTILITY CLASSES (Bootstrap overrides)
-              ======================================== */
-      .container,
-      .container-fluid,
-      .container-lg,
-      .container-md,
-      .container-sm,
-      .container-xl,
-      .container-xxl {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-right: auto;
-        margin-left: auto;
       }
     </style>
   </head>
@@ -330,14 +321,12 @@
           class="card-img-overlay d-flex justify-content-center align-items-center">
           <div class="text-center">
             <h1 class="mb-3">Cybersecurity for Small Business</h1>
-            <h3 class="mb-4">
-              Protect your business, your data, and your reputation
-            </h3>
+            <h3 class="mb-4">Protect your business, data, and reputation</h3>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 py-lg-5 g-5 m-3">
+        <div class="row row-cols-1 row-cols-lg-3 py-lg-5 g-5 m-3">
           <div class="col">
             <div class="card h-100">
               <img
@@ -553,7 +542,7 @@
       <div class="about-section mt-5">
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
           <div class="row align-items-center g-lg-5">
-            <div class="col-lg-7 text-left text-lg-start">
+            <div class="col-lg-6 text-left text-lg-start">
               <img
                 src="img/cyberedge-llc-profile.png"
                 alt="cyberedge-profile"
@@ -658,7 +647,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary w-40">
+                  <button type="submit" class="btn btn-success mt-3 w-40">
                     Submit
                   </button>
                 </div>
