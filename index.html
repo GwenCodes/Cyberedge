@@ -235,7 +235,7 @@
       ======================================== */
 
       .about-section h3 {
-        color: var(--soft-white-color);
+        color: #b3b1a2;
       }
       .about-section {
         font-family: var(--main-font);
@@ -245,9 +245,9 @@
       }
 
       .signature p {
-        font-size: 1.5rem;
+        font-size: var(--p-fs);
         font-style: italic;
-        color: var(--soft-white-color);
+        color: #b3b1a2;
       }
 
       @media (max-width: 576px) {
@@ -276,9 +276,18 @@
       }
 
       /* About Section - Contact Form */
+
+      #get-support {
+        color: #8b8b8b;
+        text-align: center; /* center the text inside the h4 */
+        margin-left: auto; /* optional: auto margins for block centering */
+        margin-right: auto;
+        display: block; /* ensure it behaves like a block element */
+      }
+
       .contact-card {
-        padding: 5rem;
-        margin: 5rem auto;
+        padding: 4rem;
+        margin: 0 auto;
         max-width: 500px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
@@ -286,7 +295,7 @@
       }
       .contact-card input::placeholder,
       .contact-card textarea::placeholder {
-        color: #8b8b8b; /* darker gray for better contrast */
+        color: #8b8b8b;
         opacity: 1;
       }
 
@@ -422,7 +431,7 @@
 
       <div class="about-section mt-5">
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-          <div class="row align-items-center g-lg-5">
+          <div class="row align-items-start g-lg-5 mt-3">
             <div class="col-lg-6 text-left text-lg-start">
               <img
                 src="img/cyberedge-llc-profile.png"
@@ -457,7 +466,7 @@
                   operating for decades, you deserve protection that goes beyond
                   basic firewalls.
                 </p>
-                <div class="signature">
+                <div class="signature ms-3">
                   <p>-Van</p>
                 </div>
               </div>
