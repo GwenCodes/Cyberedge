@@ -25,7 +25,6 @@
         --h3-fs: clamp(1.094rem, 0.58rem + 2.29vw, 2rem);
         --h2-fs: clamp(1.37rem, 0.63rem + 3.29vw, 2.67rem);
         --h1-fs: clamp(1.71rem, 0.66rem + 4.67vw, 3.55rem);
-        --xl-fs: clamp(2.14rem, 0.66rem + 6.58vw, 4.74rem);
 
         /* Font families */
         --main-font: Verdana, Geneva, Tahoma, sans-serif;
@@ -234,9 +233,6 @@
               ABOUT SECTION
       ======================================== */
 
-      .about-section h3 {
-        color: #b3b1a2;
-      }
       .about-section {
         font-family: var(--main-font);
         font-weight: 100;
@@ -271,17 +267,18 @@
 
         .about-section p,
         .about-section div {
-          font-size: 0.85rem; /* shrink paragraph and div text */
+          font-size: 1rem; /* shrink paragraph and div text */
         }
       }
 
       /* About Section - Contact Form */
 
-      #get-support {
-        color: #8b8b8b;
+      form h3 {
+        color: var(--accent-color);
         text-align: center; /* center the text inside the h4 */
         margin-left: auto; /* optional: auto margins for block centering */
         margin-right: auto;
+        margin-bottom: 2rem;
         display: block; /* ensure it behaves like a block element */
       }
 
@@ -298,9 +295,14 @@
         color: #8b8b8b;
         opacity: 1;
       }
+      @media (max-width: 576px) {
+        .contact-card {
+          padding: 2rem;
+        }
+      }
 
       .about-section-logo {
-        width: clamp(10rem, 25vw, 12rem); /* min 3rem, max 8rem */
+        width: clamp(8rem, 20vw, 10rem); /* min 3rem, max 8rem */
         height: auto;
         display: block;
         margin: auto;
@@ -336,7 +338,7 @@
         text-decoration: none;
       }
       footer .nav-link {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       footer a:hover,
@@ -481,9 +483,10 @@
                 <input type="hidden" name="form-name" value="contact" />
                 <img
                   src="img/CyberEdge-logo.png"
-                  class="about-section-logo mb-3 mb-md-4"
-                  alt="cyber-edge-logo" />
-                <h4 id="get-support">Get Support</h4>
+                  class="about-section-logo mb-2 mb-md-3"
+                  alt="cyber-edge-logo"
+                  id="get-support" />
+                <h4>Get Support</h4>
                 <div class="row">
                   <div class="col-12">
                     <label for="name" class="form-label">Name</label>
