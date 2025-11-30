@@ -268,33 +268,20 @@ main {
 .honeypot-field {
   display: none;
 }
-form.contact-card h4 {
-  font-style: var(--main-font);
-  font-weight: 600;
-  color: rgb(116, 14, 14);
-  text-align: center; /* center the text inside the h4 */
-  margin-left: auto; /* optional: auto margins for block centering */
-  margin-right: auto;
-  margin-bottom: 0.5rem;
-  display: block; /* ensure it behaves like a block element */
-}
-
-form.contact-card p {
-  font-style: var(--main-font);
-  color: var(--dark-blue);
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
-  display: block;
-}
 .form-label {
   font-weight: bold;
   color: var(--gray-font);
   margin-left: 1rem;
   margin-top: 2rem;
 }
-
+.get-support-title h4 {
+  color: var(--accent-color);
+  font-family: var(--russo-font);
+}
+.get-support-title p {
+  color: var(--accent-color);
+  font-family: var(--main-font);
+}
 .contact-card {
   padding: 2rem;
   margin: 0 auto;
@@ -314,6 +301,14 @@ form.contact-card p {
     padding: 2rem;
   }
 }
+form.contact-card .btn-success {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+form.contact-card .btn-success:hover {
+  background-color: var(--hover-background);
+  border-color: var(--hover-background);
+}
 
 .about-section-logo {
   width: clamp(8rem, 20vw, 10rem); /* min 3rem, max 8rem */
@@ -329,13 +324,13 @@ form.contact-card p {
 }
 
 .about-section img {
-  max-width: 20rem;
+  max-width: 15rem;
   margin-bottom: 4rem;
   border-radius: 7px;
 }
 @media (max-width: 576px) {
   .about-section img {
-    max-width: 100%; /* allow full width scaling */
+    max-width: 12rem;
     height: auto; /* keep aspect ratio */
     margin-left: auto; /* center horizontally */
     margin-right: auto;
