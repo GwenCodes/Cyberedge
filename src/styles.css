@@ -1,0 +1,365 @@
+/* ========================================
+              ROOT & GLOBAL STYLES
+              ======================================== */
+:root {
+  --block-fs: clamp(0.56rem, 0.4rem + 0.72vw, 0.84rem);
+  --p-fs: clamp(0.7rem, 0.44rem + 1.08vw, 1.13rem);
+  --h4-fs: clamp(0.88rem, 0.52rem + 1.58vw, 1.5rem);
+  --h3-fs: clamp(1.094rem, 0.58rem + 2.29vw, 2rem);
+  --h2-fs: clamp(1.37rem, 0.63rem + 3.29vw, 2.67rem);
+  --h1-fs: clamp(1.71rem, 0.66rem + 4.67vw, 3.55rem);
+
+  /* Font families */
+  --main-font: Verdana, Geneva, Tahoma, sans-serif;
+  --russo-font: "Russo one";
+
+  /* Colors */
+  --hover-background: #ffa552;
+  --soft-white-color: #f5f5f5;
+  --dark-blue: #091124;
+  --accent-color: #326949;
+  --gray-font: #676767;
+}
+body {
+  font-family: var(--main-font);
+  background: var(--soft-white-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* {
+        margin: 0;
+        padding: 0;
+      }*/
+.container {
+  padding: 0 1em;
+}
+h1 {
+  font-size: var(--h1-fs);
+  margin: 0 auto;
+}
+h2 {
+  font-size: var(--h2-fs);
+  margin: 0 auto;
+}
+h3 {
+  font-size: var(--h3-fs);
+  margin: 0 auto;
+}
+
+/* ========================================
+              HEADER - LOGO
+              ======================================== */
+.logo {
+  height: 100px;
+  margin: 10px;
+}
+
+/* ========================================
+              MAIN SECTION
+              ======================================== */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+}
+
+/* Main - Hero Card */
+.card {
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.card-img {
+  height: 65vh;
+  object-fit: cover;
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Main - Service Cards Row */
+.card-img-top {
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.card-body {
+  max-height: none; /* ensure body can grow */
+}
+
+.card-title {
+  color: #630707;
+  font-family: var(--russo-font);
+  font-weight: 400;
+  margin-top: 1rem;
+  font-size: var(--h4-fs);
+  margin-bottom: 1rem;
+}
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.2rem;
+    line-height: 1.3; /* tighten spacing */
+  }
+}
+.card-text {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: #676767;
+  font-family: var(--p-fs);
+}
+
+.card-text li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .card-text {
+    font-size: 0.9rem; /* smaller than default */
+    line-height: 1.3; /* tighten spacing */
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .card-text {
+    font-size: 1rem;
+  }
+  /* Taller card when rotated (landscape view) */
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .row.row-cols-1.row-cols-md-3 > * {
+    flex: 0 0 100%; /* each card takes full width */
+    max-width: 100%; /* prevent shrinking */
+  }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .card.h-100 {
+    height: clamp(65vh, 80vw, 90vh);
+  }
+  .card-body {
+    max-height: none; /* remove restrictive max-height */
+  }
+}
+/* Mobile-first: target small screens */
+@media (max-width: 576px) {
+  /* Remove gutter padding from row children */
+  .row > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Make columns take full width (already default with row-cols-1) */
+  .col {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+/* ========================================
+              FAQ SECTION
+        ======================================== */
+.faq {
+  width: 80%;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Large screens (≥992px in Bootstrap) */
+@media (min-width: 769px) {
+  .faq {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .faq {
+    width: 100%; /* full width on small screens */
+    padding: 0 0.5rem; /* keep a little breathing room at edges */
+  }
+}
+
+.faq-title {
+  font-family: var(--main-font);
+  color: #676767;
+  font-style: italic;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.accordion-button {
+  font-family: var(--main-font);
+  color: var(--gray-font);
+}
+
+.accordion-body {
+  width: 80%;
+  font-family: var(--main-font);
+  color: #676767;
+  text-align: left;
+}
+@media (max-width: 576px) {
+  .accordion-body {
+    margin: 0 !important; /* ensure no margin */
+    width: 100% !important; /* span full width */
+  }
+
+  .accordion-collapse {
+    margin-left: 0 !important; /* remove parent indentation */
+  }
+}
+
+/* ========================================
+              ABOUT SECTION
+      ======================================== */
+
+.about-section {
+  font-family: var(--main-font);
+  font-weight: 100;
+  color: #b3b1a2;
+  background-color: var(--dark-blue);
+}
+
+.signature p {
+  font-size: var(--p-fs);
+  font-style: italic;
+  color: #b3b1a2;
+}
+
+@media (max-width: 576px) {
+  .signature {
+    font-size: 2rem !important;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section {
+    font-family: var(--p-fs);
+    font-size: 0.9rem; /* smaller base font for mobile */
+    width: 100%; /* full width on small screens */
+    padding: 0 0.5rem; /* keep a little breathing room at edges */
+  }
+
+  .about-section h3 {
+    font-size: 1.5rem; /* shrink heading size */
+  }
+
+  @media (max-width: 576px) {
+    .about-section p {
+      font-family: var(--p-fs);
+      font-size: 1.1rem; /* slightly larger */
+      font-weight: 400; /* normal weight for readability */
+      line-height: 1.5; /* improve spacing */
+    }
+  }
+
+  .about-section div {
+    font-size: 1rem; /* shrink paragraph and div text */
+  }
+}
+
+/* About Section - Contact Form */
+.honeypot-field {
+  display: none;
+}
+form.contact-card h4 {
+  font-style: var(--main-font);
+  font-weight: 600;
+  color: rgb(116, 14, 14);
+  text-align: center; /* center the text inside the h4 */
+  margin-left: auto; /* optional: auto margins for block centering */
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  display: block; /* ensure it behaves like a block element */
+}
+
+form.contact-card p {
+  font-style: var(--main-font);
+  color: var(--dark-blue);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.form-label {
+  font-weight: bold;
+  color: var(--gray-font);
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 500px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  background-color: #e3e3e3;
+}
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  font-size: x-small;
+  color: grey;
+  opacity: 0.5;
+}
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 2rem;
+  }
+}
+
+.about-section-logo {
+  width: clamp(8rem, 20vw, 10rem); /* min 3rem, max 8rem */
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .logo {
+    margin-bottom: 1rem; /* reduce spacing below logo */
+  }
+}
+
+.about-section img {
+  max-width: 20rem;
+  margin-bottom: 4rem;
+  border-radius: 7px;
+}
+@media (max-width: 576px) {
+  .about-section img {
+    max-width: 100%; /* allow full width scaling */
+    height: auto; /* keep aspect ratio */
+    margin-left: auto; /* center horizontally */
+    margin-right: auto;
+    margin-bottom: 2rem;
+    display: block; /* ensure block-level for centering */
+  }
+}
+
+/* ========================================
+              FOOTER
+              ======================================== */
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer .nav-link {
+  font-size: 1rem;
+}
+
+footer a:hover,
+footer .nav .nav-link:hover {
+  color: #ffa552 !important;
+  text-decoration: none;
+}
+.footer-credit {
+  color: var(--accent-color);
+}
